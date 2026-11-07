@@ -1,0 +1,35 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	// Top-level configuration
+	"name": "web4ai",
+	"main": "src/index.js",
+	"upload_source_maps": true,
+	// Set this to today's date
+	"compatibility_date": "2026-11-07",
+	"workers_dev": false,
+	"route": {
+		"pattern": "example.org/*",
+		"zone_name": "example.org",
+	},
+	"kv_namespaces": [
+		{
+			"binding": "<web4>",
+			"id": "<KV_ID>",
+		},
+	],
+	"env": {
+		"staging": {
+			"name": "web4-staging",
+			"route": {
+				"pattern": "staging.example.org/*",
+				"zone_name": "example.org",
+			},
+			"kv_namespaces": [
+				{
+					"binding": "<MY_NAMESPACE>",
+					"id": "<STAGING_KV_ID>",
+				},
+			],
+		},
+	},
+}
