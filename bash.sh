@@ -20,3 +20,4 @@ cd demo/delegation-ui
 pip install -r requirements.txt
 python app.py
 # Visit: http://localhost:8001
+$ npx create-cloudflare@latest web4ai --existing-script web4ai
